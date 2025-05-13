@@ -47,17 +47,34 @@ Event Wise is built on a modular CrewAI architecture, where each agent has a spe
 
 ## 📦 Example Use Case
 
-> **User:** I'm planning a birthday party in Kolkata for 50 people. Budget is ₹80,000.
+> **User Flow:** The user fills out a form specifying event details.
 
-**Event Wise** responds by:
-1. Extracting the event type, location, guest count, and budget.
-2. Allocating a budget (e.g., ₹40,000 for venue, ₹30,000 for food, ₹10,000 for decor).
-3. Searching JustDial and Google for banquet halls within budget, extracting structured data.
-4. Presenting a list of venues with images, phone numbers, prices, and reviews.
-5. Asking: "Would you like to book this venue, compare options, or view more?"
-6. Repeating the process for service providers, negotiating prices, and confirming bookings.
+**Form Input:**
+- **Event Type**: Birthday Party  
+- **Location**: Kolkata  
+- **Guest Count**: 50  
+- **Budget**: ₹80,000  
 
 ---
+
+**Event Wise** responds by:
+
+1. **Parsing the Form Input** – Automatically extracts structured data from the submitted form (event type, location, guest count, budget).
+2. **Smart Budget Allocation** – Intelligently divides the total budget (e.g., ₹40,000 for venue, ₹30,000 for catering, ₹10,000 for decor), tailored to the event type.
+3. **Venue Discovery** – Uses Google and JustDial to search for suitable banquet halls in Kolkata, matching the budget and guest count.
+4. **Data Extraction & Validation** – Collects structured details for each venue, including:
+   - Name, address, verified phone number  
+   - Price estimate, rating, images (if available)  
+   - Booking source URL  
+5. **Interactive Response** – Displays top 3–5 venue options to the user in a clear, actionable format.
+6. **Follow-up Prompt** – The chatbot asks:  
+   > "Would you like to book one of these venues, see more options, or compare details?"
+7. **Service Provider Matching** – Repeats the same process for vendors like caterers, decorators, and photographers.
+8. **Negotiation & Booking** – Initiates vendor negotiations if requested and confirms bookings on the user’s behalf.
+
+---
+
+
 
 ## 🧩 Roadmap
 
